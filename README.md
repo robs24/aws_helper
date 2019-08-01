@@ -12,7 +12,7 @@ Commands that are currently available for use are:
 
 I've found it is best to configure a number of aliases as part of your `.bash_profile` (or similar) in order to utilise the script as easily as possible. These are as follows...
 
-<pre>export PYTHONPATH=$PYTHONPATH:<\<PATH TO DOWNLOADED FILE>>
+<pre>export PYTHONPATH=$PYTHONPATH:&lt&ltPATH TO DOWNLOADED FILE&gt&gt
 alias awsSetCreds="python3 -c 'import awshelper; awshelper.setCreds()'; source $HOME/.aws/.awsenv 2>/dev/null; rm -f $HOME/.aws/.awsenv"
 alias awsUnsetCreds="python3 -c 'import awshelper; awshelper.unsetCreds()'; source $HOME/.aws/.awsenv 2>/dev/null; rm -f $HOME/.aws/.awsenv"
 alias awsAuthMfa="python3 -c 'import awshelper; awshelper.authMfa()'; source $HOME/.aws/.awsenv 2>/dev/null; rm -f $HOME/.aws/.awsenv"</pre>
