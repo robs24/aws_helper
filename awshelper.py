@@ -68,7 +68,7 @@ def authMfa():
     sts.get_caller_identity()
 
     if os.environ.get('AWS_SESSION_TOKEN'):
-      raise Exception('ERROR: already using an STS token. You probably don\'t want to do MFA authentication at this stage - perhaps run \'aws_reset_creds\' to reset')
+      raise Exception('ERROR: already using an STS token. You probably don\'t want to do MFA authentication at this stage')
     else:
       iam = boto3.client('iam')
       mfaSerial = iam.list_mfa_devices()
