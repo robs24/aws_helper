@@ -2,7 +2,7 @@
 
 This module allows a user to establish a connection to AWS - for use with `awscli` - using MFA, simplifying the steps one would typically have to take.
 
-Commands that are currently available for use are:
+Functions that are currently available for use are:
 
 * setCreds - this will prompt for the AWS profile to use and set your `AWS_PROFILE` environment variable accordingly. It will also check to ensure the IAM user/creds are valid for use
 * unsetCreds - this will unset all environment variables relating to AWS that have been set as part of these functions
