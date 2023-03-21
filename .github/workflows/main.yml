@@ -1,4 +1,4 @@
-name: seed-environment
+name: test-job
 
 on:
   workflow_dispatch: 
@@ -8,18 +8,18 @@ on:
         
 jobs:
   test:
-    name: Test
+    name: test
     runs-on: ubuntu-latest
     
     steps:
-    - name: Create AWS profile
-      uses: docker://ghcr.io/mrchief/aws-creds-okta-action:latest 
+    - name: create AWS profile
+      uses: docker://ghcr.io/robsteel24/aws-creds-okta-action:latest 
       with:
         aws_role_arn: arn:aws:iam::323040907683:role/Okta_Club_Cloud_Admin
         okta_username: rob.steel@and.digital
         okta_password: ${{ secrets.OKTA_PASSWORD }}
         okta_app_url: https://and-digital.okta.com/home/amazon_aws/0oamddk19B8edYVsh356/272
         okta_mfa_method: token
-        okta_mfa_seed: ${{ github.event.inputs.mfa_token }}
+        okta_mfa_token: ${{ github.event.inputs.mfa_token }}
     - run: |
         aws s3 ls
