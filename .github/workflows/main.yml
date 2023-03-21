@@ -13,7 +13,7 @@ jobs:
     
     steps:
     - name: create AWS profile
-      uses: docker://ghcr.io/robsteel24/aws-creds-okta-action:latest 
+      uses: docker://docker.io/robsteel/aws-creds-okta-action:latest 
       with:
         aws_role_arn: arn:aws:iam::323040907683:role/Okta_Club_Cloud_Admin
         okta_username: rob.steel@and.digital
