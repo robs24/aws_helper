@@ -19,6 +19,7 @@ jobs:
         okta_username: rob.steel@and.digital
         okta_password: ${{ secrets.OKTA_PASSWORD }}
         okta_app_url: https://and-digital.okta.com/home/amazon_aws/0oamddk19B8edYVsh356/272
+        okta_mfa_method: token
         okta_mfa_seed: ${{ github.event.inputs.mfa_token }}
     - run: |
         aws s3 ls
